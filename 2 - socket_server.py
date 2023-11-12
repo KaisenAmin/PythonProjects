@@ -28,7 +28,7 @@ def start_server() -> None:
 
 
 if __name__ == "__main__":
-    HOST: Final[str] = "127.0.0.1"
+    HOST: Final[str] = "0.0.0.0"
     PORT: Final[int] = 64321
 
     start_server()

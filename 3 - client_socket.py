@@ -15,14 +15,14 @@ def start_client() -> None:
             if message.lower() == "exit":
                 break
 
-            client_socket.sendall(message.encode())
+            client_socket.sendall((message + "\n").encode())
             response: bytes = client_socket.recv(1024)
 
             print(f"Receive data is -> {response.decode('utf-8')}")
 
 
 if __name__ == "__main__":
-    HOST: Final[str] = "127.0.0.1"
-    PORT: Final[int] = 64321
+    HOST: Final[str] = "192.168.1.107"
+    PORT: Final[int] = 8088
 
     start_client()
